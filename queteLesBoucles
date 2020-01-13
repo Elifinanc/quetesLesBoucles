@@ -1,0 +1,46 @@
+using System;
+
+namespace QuetesLesBoucles
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i = 0;
+            int iteration = 0;
+            int j = 0;
+            string[] moves = new string[32];
+
+            for (i = 0; i < moves.Length; i++)
+            {
+                Console.WriteLine("Write a dance step: ");
+                string step = Console.ReadLine();
+
+                if (step != "")
+                {
+                    if ((step == "done") || (i == moves.Length - 1))
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        moves[i] = step;
+                    }
+                }
+            }
+
+
+            Console.WriteLine("Write how many times do you want to repeat those steps: ");
+            iteration = Convert.ToInt32(Console.ReadLine());
+
+            for (j = 0; j < iteration; j++)
+            {
+                for (i = 0; i<moves.Length; i++)
+                {
+                    Console.Write(moves[i] + " ");
+                }
+                Console.WriteLine();
+            }
+        }
+    }       
+}
