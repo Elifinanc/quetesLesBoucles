@@ -16,17 +16,16 @@ namespace QuetesLesBoucles
                 Console.WriteLine("Write a dance step: ");
                 string step = Console.ReadLine();
 
-                if (step != "")
+                
+                if ((step == "done") || (i == moves.Length - 1))
                 {
-                    if ((step == "done") || (i == moves.Length - 1))
-                    {
-                        break;
-                    }
-                    else
-                    {
-                        moves[i] = step;
-                    }
+                    break;
                 }
+                else
+                {
+                    moves[i] = step;
+                }
+               
             }
 
 
@@ -44,3 +43,6 @@ namespace QuetesLesBoucles
         }
     }       
 }
+                                                   
+                   
+                                            
